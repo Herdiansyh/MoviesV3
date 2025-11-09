@@ -1,58 +1,22 @@
 // src/pages/Film.jsx
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import MovieSection from "../components/MovieSection";
-import { filmAPI } from "../services/api";
+import { useFilmData } from "../hooks/useFilmData";
 
 export default function Film({ footer, datahero }) {
-  // State untuk menyimpan data
-  const [moviesData, setMoviesData] = useState({
-    dataMovies: [],
-    imgVertikal: [],
-    newReleaseMovies: [],
-    topMovies: [],
-  });
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const { data, loading, error } = useFilmData();
 
-  // Fetch data movies
-  useEffect(() => {
-    const fetchMoviesData = async () => {
-      try {
-        setLoading(true);
-        const allData = await filmAPI.getAllData();
-        setMoviesData({
-          dataMovies: allData.dataMovies || [],
-          imgVertikal: allData.imgVertikal || [],
-          newReleaseMovies: allData.newReleaseMovies || [],
-          topMovies: allData.topMovies || [],
-        });
-        setError(null);
-      } catch (err) {
-        setError(err.message);
-        console.error("Error fetching movies data:", err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchMoviesData();
-  }, []);
-
-  // Randomize data setelah data di-fetch
-  const datamovies = [...moviesData.dataMovies].sort(() => Math.random() - 0.5);
-  const topmovies = [...moviesData.topMovies].sort(() => Math.random() - 0.5);
-  const newmovies = [...moviesData.newReleaseMovies].sort(
-    () => Math.random() - 0.5
-  );
-  const imgvertikal = [...moviesData.imgVertikal].sort(
-    () => Math.random() - 0.5
-  );
+  // Acak data untuk tampilan yang bervariasi
+  const datamovies = [...data.dataMovies].sort(() => Math.random() - 0.5);
+  const topmovies = [...data.topMovies].sort(() => Math.random() - 0.5);
+  const newmovies = [...data.newReleaseMovies].sort(() => Math.random() - 0.5);
+  const imgvertikal = [...data.imgVertikal].sort(() => Math.random() - 0.5);
   const dataheroRandom = [...datahero].sort(() => Math.random() - 0.5);
 
-  // Loading component
+  // Tampilan loading
   if (loading) {
     return (
       <div className="bg-[#181A1C] text-white min-h-screen flex justify-center items-center">
@@ -61,7 +25,7 @@ export default function Film({ footer, datahero }) {
     );
   }
 
-  // Error component
+  // Tampilan error
   if (error) {
     return (
       <div className="bg-[#181A1C] text-white min-h-screen flex justify-center items-center">
@@ -81,6 +45,7 @@ export default function Film({ footer, datahero }) {
     );
   }
 
+  // Tampilan utama
   return (
     <div className="bg-[#181A1C] text-white min-h-screen">
       <Header />

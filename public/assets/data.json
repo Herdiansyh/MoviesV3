@@ -8,6 +8,8 @@
       "sinopsis": "Seorang pria tua pemarah mulai berubah setelah bertemu dengan tetangga barunya.",
       "cast": "Tom Hanks, Mariana Treviño",
       "pembuat": "Marc Forster",
+      "rating": "4.5/5",
+      "duration": "2 jam 6 menit",
       "url": "https://www.youtube.com/watch?v=trailer-otto",
       "top": "Top 6",
       "akses": "premium"
@@ -20,6 +22,8 @@
       "sinopsis": "Kisah fiksi dengan tokoh Anke, penuh konflik emosional.",
       "cast": "TBA",
       "pembuat": "Unknown",
+      "rating": "3.8/5",
+      "duration": "1 jam 35 menit",
       "url": "https://www.youtube.com/watch?v=trailer-anke"
     },
     {
@@ -30,6 +34,8 @@
       "sinopsis": "Bruce Wayne menghadapi Riddler yang meneror Gotham dengan teka-teki mematikan.",
       "cast": "Robert Pattinson, Zoë Kravitz",
       "pembuat": "Matt Reeves",
+      "rating": "4.6/5",
+      "duration": "2 jam 56 menit",
       "url": "https://www.youtube.com/watch?v=trailer-batman",
       "top": "Top 7",
       "akses": "premium"
@@ -42,6 +48,8 @@
       "sinopsis": "Robot perawat Baymax kembali membantu orang-orang di kotanya.",
       "cast": "Scott Adsit, Ryan Potter",
       "pembuat": "Don Hall",
+      "rating": "4.4/5",
+      "duration": "1 jam 10 menit",
       "url": "https://www.youtube.com/watch?v=trailer-baymax",
       "top": "Top 9"
     },
@@ -53,6 +61,8 @@
       "sinopsis": "Seorang anak jenius dan robotnya membentuk tim superhero.",
       "cast": "Ryan Potter, Scott Adsit",
       "pembuat": "Don Hall, Chris Williams",
+      "rating": "4.7/5",
+      "duration": "1 jam 42 menit",
       "url": "https://www.youtube.com/watch?v=trailer-bighero6",
       "top": "Top 8"
     },
@@ -64,6 +74,8 @@
       "sinopsis": "Program pelatihan striker sepakbola terbaik Jepang.",
       "cast": "Kazuki Ura, Tasuku Kaito",
       "pembuat": "Tetsuaki Watanabe",
+      "rating": "4.3/5",
+      "duration": "1 jam 30 menit",
       "url": "https://www.youtube.com/watch?v=trailer-bluelock",
       "top": "Top 10"
     },
@@ -75,6 +87,8 @@
       "sinopsis": "Kisah cinta remaja Dilan dan Milea di Bandung tahun 90-an.",
       "cast": "Iqbaal Ramadhan, Vanesha Prescilla",
       "pembuat": "Fajar Bustomi",
+      "rating": "4.0/5",
+      "duration": "1 jam 50 menit",
       "url": "https://www.youtube.com/watch?v=trailer-dilan1991",
       "top": "Top 5"
     },
@@ -86,6 +100,8 @@
       "sinopsis": "Seorang anak muda menghadapi masa lalunya yang kelam.",
       "cast": "TBA",
       "pembuat": "Unknown",
+      "rating": "3.9/5",
+      "duration": "1 jam 45 menit",
       "url": "https://www.youtube.com/watch?v=trailer-dirtyboy",
       "akses": "premium"
     },
@@ -97,10 +113,11 @@
       "sinopsis": "Keluarga Crawley menghadapi perubahan di era baru.",
       "cast": "Hugh Bonneville, Michelle Dockery",
       "pembuat": "Simon Curtis",
+      "rating": "4.2/5",
+      "duration": "2 jam 5 menit",
       "url": "https://www.youtube.com/watch?v=trailer-downton"
     }
   ],
-
   "topMovies": [
     {
       "id": 1,
@@ -110,6 +127,8 @@
       "sinopsis": "Pelajar dipaksa bertugas melawan alien misterius.",
       "cast": "Shin Hyun-soo, Lee Soon-won",
       "pembuat": "Sung Yong-il",
+      "rating": "4.3/5",
+      "duration": "2 jam 2 menit",
       "url": "https://www.youtube.com/watch?v=trailer-dutyafterschool",
       "top": "Top 4"
     },
@@ -121,6 +140,8 @@
       "sinopsis": "Sekelompok penjahat luar angkasa bersatu menyelamatkan galaksi.",
       "cast": "Chris Pratt, Zoe Saldana",
       "pembuat": "James Gunn",
+      "rating": "4.7/5",
+      "duration": "2 jam 1 menit",
       "url": "https://www.youtube.com/watch?v=trailer-guardians",
       "top": "Top 3"
     },
@@ -132,6 +153,8 @@
       "sinopsis": "Dinosaurus kembali hidup di taman hiburan modern.",
       "cast": "Chris Pratt, Bryce Dallas Howard",
       "pembuat": "Colin Trevorrow",
+      "rating": "4.5/5",
+      "duration": "2 jam 4 menit",
       "url": "https://www.youtube.com/watch?v=trailer-jurassicworld"
     },
     {
@@ -142,6 +165,8 @@
       "sinopsis": "Boneka AI canggih berubah menjadi ancaman mematikan.",
       "cast": "Allison Williams, Violet McGraw",
       "pembuat": "Gerard Johnstone",
+      "rating": "4.1/5",
+      "duration": "1 jam 42 menit",
       "url": "https://www.youtube.com/watch?v=trailer-m3gan",
       "top": "Top 2"
     },
@@ -153,6 +178,8 @@
       "sinopsis": "Seorang anak perempuan mencari ibunya yang hilang dengan bantuan teknologi.",
       "cast": "Storm Reid, Nia Long",
       "pembuat": "Nicholas D. Johnson, Will Merrick",
+      "rating": "4.4/5",
+      "duration": "1 jam 51 menit",
       "url": "https://www.youtube.com/watch?v=trailer-missing",
       "top": "Top 1"
     },
@@ -164,6 +191,8 @@
       "sinopsis": "Para murid UA melawan ancaman villain kuat di sebuah pulau.",
       "cast": "Daiki Yamashita, Nobuhiko Okamoto",
       "pembuat": "Kenji Nagasaki",
+      "rating": "4.6/5",
+      "duration": "1 jam 44 menit",
       "url": "https://www.youtube.com/watch?v=trailer-mha"
     },
     {
@@ -174,6 +203,8 @@
       "sinopsis": "Kisah bertahan hidup dalam kondisi ekstrem.",
       "cast": "TBA",
       "pembuat": "Unknown",
+      "rating": "3.9/5",
+      "duration": "1 jam 48 menit",
       "url": "https://www.youtube.com/watch?v=trailer-sobrevivente"
     },
     {
@@ -184,6 +215,8 @@
       "sinopsis": "Sonic dan Tails bekerja sama melawan Dr. Robotnik.",
       "cast": "Ben Schwartz, Jim Carrey",
       "pembuat": "Jeff Fowler",
+      "rating": "4.2/5",
+      "duration": "2 jam 2 menit",
       "url": "https://www.youtube.com/watch?v=trailer-sonic2",
       "akses": "premium"
     }
@@ -197,6 +230,8 @@
       "sinopsis": "Seorang pelatih sepakbola Amerika mengelola tim Inggris.",
       "cast": "Jason Sudeikis, Hannah Waddingham",
       "pembuat": "Bill Lawrence, Jason Sudeikis",
+      "rating": "4.6/5",
+      "duration": "2 jam 5 menit",
       "url": "https://www.youtube.com/watch?v=trailer-tedlasso"
     },
     {
@@ -207,6 +242,8 @@
       "sinopsis": "Seorang anak perempuan mencari ibunya yang hilang dengan bantuan teknologi.",
       "cast": "Storm Reid, Nia Long",
       "pembuat": "Nicholas D. Johnson, Will Merrick",
+      "rating": "4.2/5",
+      "duration": "1 jam 52 menit",
       "url": "https://www.youtube.com/watch?v=trailer-missing",
       "top": "Top 1",
       "akses": "premium"
@@ -219,6 +256,8 @@
       "sinopsis": "Tentara dikirim ke masa depan untuk melawan alien.",
       "cast": "Chris Pratt, Yvonne Strahovski",
       "pembuat": "Chris McKay",
+      "rating": "4.4/5",
+      "duration": "2 jam 18 menit",
       "url": "https://www.youtube.com/watch?v=trailer-tomorrowwar"
     },
     {
@@ -229,6 +268,8 @@
       "sinopsis": "Kasus pengusiran roh yang diangkat dari kisah nyata.",
       "cast": "Patrick Wilson, Vera Farmiga",
       "pembuat": "Michael Chaves",
+      "rating": "4.3/5",
+      "duration": "1 jam 52 menit",
       "url": "https://www.youtube.com/watch?v=trailer-conjuring2"
     },
     {
@@ -239,6 +280,8 @@
       "sinopsis": "Ed dan Lorraine Warren menghadapi kasus rumah berhantu.",
       "cast": "Patrick Wilson, Vera Farmiga",
       "pembuat": "James Wan",
+      "rating": "4.8/5",
+      "duration": "1 jam 52 menit",
       "url": "https://www.youtube.com/watch?v=trailer-conjuring1",
       "akses": "premium"
     },
@@ -250,6 +293,8 @@
       "sinopsis": "Seorang pria bertemu arwah dan menjelajahi masa lalu.",
       "cast": "Yannawoutthi Chanthalungsy, Vilouna Phetmany",
       "pembuat": "Mattie Do",
+      "rating": "4.0/5",
+      "duration": "1 jam 56 menit",
       "url": "https://www.youtube.com/watch?v=trailer-longwalk"
     },
     {
@@ -260,11 +305,12 @@
       "sinopsis": "Seorang pelatih sepakbola Amerika mengelola tim Inggris.",
       "cast": "Jason Sudeikis, Hannah Waddingham",
       "pembuat": "Bill Lawrence, Jason Sudeikis",
+      "rating": "4.1/5",
+      "duration": "2 jam",
       "url": "https://www.youtube.com/watch?v=trailer-tedlasso"
     }
   ],
-
-  "trendingMovies ": [
+  "trendingMovies": [
     {
       "id": 1,
       "image": "/img/movie/thelongwalk.png",
@@ -273,6 +319,8 @@
       "sinopsis": "Seorang pria bertemu arwah dan menjelajahi masa lalu.",
       "cast": "Yannawoutthi Chanthalungsy, Vilouna Phetmany",
       "pembuat": "Mattie Do",
+      "rating": "4.6/5",
+      "duration": "1 jam 56 menit",
       "url": "https://www.youtube.com/watch?v=trailer-longwalk"
     },
     {
@@ -283,6 +331,8 @@
       "sinopsis": "Seorang pelatih sepakbola Amerika mengelola tim Inggris.",
       "cast": "Jason Sudeikis, Hannah Waddingham",
       "pembuat": "Bill Lawrence, Jason Sudeikis",
+      "rating": "4.2/5",
+      "duration": "2 jam 5 menit",
       "url": "https://www.youtube.com/watch?v=trailer-tedlasso"
     },
     {
@@ -293,6 +343,8 @@
       "sinopsis": "Seorang pria bertemu arwah dan menjelajahi masa lalu.",
       "cast": "Yannawoutthi Chanthalungsy, Vilouna Phetmany",
       "pembuat": "Mattie Do",
+      "rating": "3.9/5",
+      "duration": "1 jam 56 menit",
       "url": "https://www.youtube.com/watch?v=trailer-longwalk",
       "akses": "premium"
     },
@@ -304,6 +356,8 @@
       "sinopsis": "Dinosaurus kembali hidup di taman hiburan modern.",
       "cast": "Chris Pratt, Bryce Dallas Howard",
       "pembuat": "Colin Trevorrow",
+      "rating": "4.2/5",
+      "duration": "2 jam 4 menit",
       "url": "https://www.youtube.com/watch?v=trailer-jurassicworld"
     },
     {
@@ -314,6 +368,8 @@
       "sinopsis": "Tentara dikirim ke masa depan untuk melawan alien.",
       "cast": "Chris Pratt, Yvonne Strahovski",
       "pembuat": "Chris McKay",
+      "rating": "4.2/5",
+      "duration": "2 jam 18 menit",
       "url": "https://www.youtube.com/watch?v=trailer-tomorrowwar",
       "akses": "premium"
     },
@@ -325,6 +381,8 @@
       "sinopsis": "Para murid UA melawan ancaman villain kuat di sebuah pulau.",
       "cast": "Daiki Yamashita, Nobuhiko Okamoto",
       "pembuat": "Kenji Nagasaki",
+      "rating": "4.0/5",
+      "duration": "1 jam 44 menit",
       "url": "https://www.youtube.com/watch?v=trailer-mha"
     },
     {
@@ -335,6 +393,8 @@
       "sinopsis": "Seorang pria tua pemarah mulai berubah setelah bertemu dengan tetangga barunya.",
       "cast": "Tom Hanks, Mariana Treviño",
       "pembuat": "Marc Forster",
+      "rating": "4.8/5",
+      "duration": "2 jam 6 menit",
       "url": "https://www.youtube.com/watch?v=trailer-otto",
       "top": "Top 6"
     }
@@ -348,6 +408,8 @@
       "sinopsis": "Para siswa sekolah menengah direkrut untuk melawan makhluk misterius yang menyerang bumi.",
       "cast": "Shin Hyun-soo, Lee Soon-won",
       "pembuat": "Sung Yong-il",
+      "rating": "4.2/5",
+      "duration": "1 jam 55 menit",
       "url": "https://www.youtube.com/embed/U0MOoyI7pIM"
     },
     {
@@ -358,6 +420,8 @@
       "sinopsis": "Sebuah apartemen dikarantina setelah virus mematikan menyebar, memaksa penghuni untuk bertahan hidup.",
       "cast": "Han Hyo-joo, Park Hyung-sik, Jo Woo-jin",
       "pembuat": "Ahn Gil-ho",
+      "rating": "4.5/5",
+      "duration": "1 jam 47 menit",
       "url": "https://www.youtube.com/embed/gqhUlldiLEo"
     },
     {
@@ -368,6 +432,8 @@
       "sinopsis": "Seorang mantan marinir bergabung dengan dunia Pandora dan menemukan konflik antara manusia dan Na'vi.",
       "cast": "Sam Worthington, Zoe Saldana, Sigourney Weaver",
       "pembuat": "James Cameron",
+      "rating": "4.0/5",
+      "duration": "2 jam 42 menit",
       "url": "https://www.youtube.com/embed/nb_fFj_0rq8"
     },
     {
@@ -378,6 +444,8 @@
       "sinopsis": "Seorang pelatih sepakbola Amerika yang optimis mencoba mengelola klub Inggris meskipun tidak berpengalaman.",
       "cast": "Jason Sudeikis, Hannah Waddingham, Brett Goldstein",
       "pembuat": "Bill Lawrence, Jason Sudeikis",
+      "rating": "4.2/5",
+      "duration": "2 jam 5 menit",
       "url": "https://www.youtube.com/embed/3u7EIiohs6U"
     }
   ],
@@ -391,6 +459,7 @@
       "cast": "Tom Hanks, Mariana Treviño",
       "pembuat": "Marc Forster",
       "rating": "4.3/5",
+      "duration": "2 jam 6 menit",
       "url": "https://www.youtube.com/watch?v=trailer-otto"
     },
     {
@@ -402,6 +471,7 @@
       "cast": "Kento Yamazaki, Tao Tsuchiya",
       "pembuat": "Shinsuke Sato",
       "rating": "4.6/5",
+      "duration": "2 jam 15 menit",
       "url": "https://www.youtube.com/watch?v=trailer-alice"
     },
     {
@@ -413,6 +483,7 @@
       "cast": "Park Ji-hu, Yoon Chan-young, Cho Yi-hyun",
       "pembuat": "Lee Jae-kyoo",
       "rating": "4.2/5",
+      "duration": "1 jam 58 menit",
       "url": "https://www.youtube.com/watch?v=trailer-allofus"
     },
     {
@@ -424,6 +495,7 @@
       "cast": "Kazuki Ura, Tasuku Kaito",
       "pembuat": "Tetsuaki Watanabe",
       "rating": "4.7/5",
+      "duration": "1 jam 50 menit",
       "url": "https://www.youtube.com/watch?v=trailer-bluelock"
     },
     {
@@ -435,6 +507,7 @@
       "cast": "Leonardo DiCaprio, Jennifer Lawrence, Meryl Streep",
       "pembuat": "Adam McKay",
       "rating": "3.9/5",
+      "duration": "2 jam 18 menit",
       "url": "https://www.youtube.com/watch?v=trailer-dontlookup"
     },
     {
@@ -446,6 +519,7 @@
       "cast": "Chris Pratt, Zoe Saldana, Dave Bautista",
       "pembuat": "James Gunn",
       "rating": "4.8/5",
+      "duration": "2 jam 5 menit",
       "url": "https://www.youtube.com/watch?v=trailer-guardians"
     },
     {
@@ -457,6 +531,7 @@
       "cast": "Storm Reid, Nia Long",
       "pembuat": "Nicholas D. Johnson, Will Merrick",
       "rating": "4.1/5",
+      "duration": "1 jam 52 menit",
       "url": "https://www.youtube.com/watch?v=trailer-missing"
     },
     {
@@ -468,6 +543,7 @@
       "cast": "Giuseppe Battiston, Anna Foglietta",
       "pembuat": "Paolo Genovese",
       "rating": "4.0/5",
+      "duration": "1 jam 46 menit",
       "url": "https://www.youtube.com/watch?v=trailer-perfectstrangers"
     },
     {
@@ -479,6 +555,7 @@
       "cast": "Jason Sudeikis, Hannah Waddingham, Brett Goldstein",
       "pembuat": "Bill Lawrence, Jason Sudeikis",
       "rating": "4.9/5",
+      "duration": "2 jam 5 menit",
       "url": "https://www.youtube.com/watch?v=trailer-tedlasso"
     }
   ]

@@ -11,6 +11,7 @@ import Series from "./pages/Series";
 import Film from "./pages/Film";
 import Profile from "./pages/Profile";
 import { useFilmData } from "./hooks/useFilmData";
+import Premium from "./components/Premium";
 
 // Loading component
 const LoadingSpinner = () => (
@@ -72,6 +73,7 @@ export default function App() {
         />
         <Route path="/daftar-saya" element={<DaftarSaya footer={footers} />} />
         <Route path="/profile" element={<Profile footer={footers} />} />
+        <Route path="/premium" element={<Premium footer={footers} />} />
       </Routes>
     </Router>
   );

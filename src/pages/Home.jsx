@@ -1,55 +1,18 @@
 // src/pages/Home.jsx
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import MovieSection from "../components/MovieSection";
 import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
-import { filmAPI } from "../services/api";
+import { useFilmData } from "../hooks/useFilmData";
 
 export default function Home({ footer, datahero }) {
   const navigate = useNavigate();
   const hasChecked = useRef(false);
+  const { data, loading, error } = useFilmData();
 
-  // State untuk menyimpan data
-  const [moviesData, setMoviesData] = useState({
-    dataHero: [],
-    dataMovies: [],
-    topMovies: [],
-    newReleaseMovies: [],
-    trendingMovies: [],
-    imgVertikal: [],
-  });
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  // Fetch data movies
-  useEffect(() => {
-    const fetchMoviesData = async () => {
-      try {
-        setLoading(true);
-        const allData = await filmAPI.getAllData();
-        setMoviesData({
-          dataHero: allData.dataHero || [],
-          trendingMovies: allData.trendingMovies || [],
-          dataMovies: allData.dataMovies || [],
-          imgVertikal: allData.imgVertikal || [],
-          newReleaseMovies: allData.newReleaseMovies || [],
-          topMovies: allData.topMovies || [],
-        });
-        setError(null);
-      } catch (err) {
-        setError(err.message);
-        console.error("Error fetching movies data:", err);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchMoviesData();
-  }, []);
-
-  // Check authentication
+  // Cek autentikasi user saat pertama kali halaman dimuat
   useEffect(() => {
     if (!hasChecked.current) {
       const user = JSON.parse(localStorage.getItem("loggedInUser"));
@@ -61,7 +24,7 @@ export default function Home({ footer, datahero }) {
     }
   }, [navigate]);
 
-  // Loading component
+  // Tampilan loading
   if (loading) {
     return (
       <div className="bg-[#181A1C] text-white min-h-screen flex justify-center items-center">
@@ -70,7 +33,7 @@ export default function Home({ footer, datahero }) {
     );
   }
 
-  // Error component
+  // Tampilan error
   if (error) {
     return (
       <div className="bg-[#181A1C] text-white min-h-screen flex justify-center items-center">
@@ -90,6 +53,13 @@ export default function Home({ footer, datahero }) {
     );
   }
 
+  // Acak urutan data agar tampilan dinamis
+  const imgvertikal = [...data.imgVertikal].sort(() => Math.random() - 0.5);
+  const topmovies = [...data.topMovies].sort(() => Math.random() - 0.5);
+  const datamovies = [...data.dataMovies].sort(() => Math.random() - 0.5);
+  const newmovies = [...data.newReleaseMovies].sort(() => Math.random() - 0.5);
+
+  // Tampilan utama
   return (
     <div className="bg-[#181A1C] text-white min-h-screen">
       <Header />
@@ -97,28 +67,28 @@ export default function Home({ footer, datahero }) {
       <main className="px-6 md:px-20 py-10 space-y-10">
         <MovieSection
           title="Melanjutkan Tontonan Film series"
-          moviesvertikal={moviesData.imgVertikal}
+          moviesvertikal={imgvertikal}
           type="vertikal"
         />
         <MovieSection
           title="Persembahan dari chill"
-          topmovies={moviesData.topMovies}
+          topmovies={topmovies}
           type="topmovies"
         />
         <MovieSection
           title="Top Rating Film dan Series Hari ini"
-          movies={moviesData.dataMovies}
+          movies={datamovies}
           type="movies"
         />
         <MovieSection
           title="Film Trending"
           type="topmovies"
-          topmovies={moviesData.topMovies}
+          topmovies={topmovies}
         />
         <MovieSection
           title="Rilis Baru"
           type="newmovies"
-          newmovies={moviesData.newReleaseMovies}
+          newmovies={newmovies}
         />
       </main>
       <Footer footers={footer} />

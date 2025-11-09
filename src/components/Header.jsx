@@ -85,9 +85,12 @@ export default function Header() {
             >
               <i className="fi fi-sr-user"></i> Profile
             </Link>
-            <button className="block px-4 py-2 text-sm hover:text-blue-700 hover:cursor-pointer w-full text-left">
+            <Link
+              to="/premium"
+              className="block px-4 py-2 text-sm hover:text-blue-700 hover:cursor-pointer w-full text-left"
+            >
               <i className="fi fi-sr-star"></i> Premium
-            </button>
+            </Link>
             <button
               onClick={handleLogout}
               className="block px-4 py-2 text-sm text-red-600 hover:text-blue-700 hover:cursor-pointer w-full text-left"
