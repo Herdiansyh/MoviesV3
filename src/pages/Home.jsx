@@ -1,16 +1,24 @@
 // src/pages/Home.jsx
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import MovieSection from "../components/MovieSection";
 import Footer from "../components/Footer";
 import { useNavigate } from "react-router-dom";
-import { useFilmData } from "../hooks/useFilmData";
+import { filmAPI } from "../services/api"; // import api.js
 
-export default function Home({ footer, datahero }) {
+export default function Home({ footer }) {
   const navigate = useNavigate();
   const hasChecked = useRef(false);
-  const { data, loading, error } = useFilmData();
+
+  // State untuk tiap kategori
+  const [dataHero, setDataHero] = useState([]);
+  const [imgVertikal, setImgVertikal] = useState([]);
+  const [topMovies, setTopMovies] = useState([]);
+  const [dataMovies, setDataMovies] = useState([]);
+  const [newMovies, setNewMovies] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   // Cek autentikasi user saat pertama kali halaman dimuat
   useEffect(() => {
@@ -24,7 +32,34 @@ export default function Home({ footer, datahero }) {
     }
   }, [navigate]);
 
-  // Tampilan loading
+  // Fetch data dari MockAPI
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const [hero, vertikal, top, movies, newReleases] = await Promise.all([
+          filmAPI.getHeroData(),
+          filmAPI.getMovies(), // Jika ada kategori imgVertikal, buat fungsi di api.js juga
+          filmAPI.getTopMovies(),
+          filmAPI.getMovies(),
+          filmAPI.getNewReleases(),
+          filmAPI.getVertikalMovies(),
+        ]);
+
+        setDataHero(hero);
+        setImgVertikal(vertikal);
+        setTopMovies(top);
+        setDataMovies(movies);
+        setNewMovies(newReleases);
+        setLoading(false);
+      } catch (err) {
+        setError(err.message || "Error fetching data");
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   if (loading) {
     return (
       <div className="bg-[#181A1C] text-white min-h-screen flex justify-center items-center">
@@ -33,7 +68,6 @@ export default function Home({ footer, datahero }) {
     );
   }
 
-  // Tampilan error
   if (error) {
     return (
       <div className="bg-[#181A1C] text-white min-h-screen flex justify-center items-center">
@@ -53,42 +87,41 @@ export default function Home({ footer, datahero }) {
     );
   }
 
-  // Acak urutan data agar tampilan dinamis
-  const imgvertikal = [...data.imgVertikal].sort(() => Math.random() - 0.5);
-  const topmovies = [...data.topMovies].sort(() => Math.random() - 0.5);
-  const datamovies = [...data.dataMovies].sort(() => Math.random() - 0.5);
-  const newmovies = [...data.newReleaseMovies].sort(() => Math.random() - 0.5);
+  // Acak urutan data
+  const shuffledImgVertikal = [...imgVertikal].sort(() => Math.random() - 0.5);
+  const shuffledTopMovies = [...topMovies].sort(() => Math.random() - 0.5);
+  const shuffledDataMovies = [...dataMovies].sort(() => Math.random() - 0.5);
+  const shuffledNewMovies = [...newMovies].sort(() => Math.random() - 0.5);
 
-  // Tampilan utama
   return (
     <div className="bg-[#181A1C] text-white min-h-screen">
       <Header />
-      <Hero datahero={datahero} />
+      <Hero datahero={dataHero} />
       <main className="px-6 md:px-20 py-10 space-y-10">
         <MovieSection
           title="Melanjutkan Tontonan Film series"
-          moviesvertikal={imgvertikal}
+          moviesvertikal={shuffledImgVertikal}
           type="vertikal"
         />
         <MovieSection
           title="Persembahan dari chill"
-          topmovies={topmovies}
+          topmovies={shuffledTopMovies}
           type="topmovies"
         />
         <MovieSection
           title="Top Rating Film dan Series Hari ini"
-          movies={datamovies}
+          movies={shuffledDataMovies}
           type="movies"
         />
         <MovieSection
           title="Film Trending"
+          topmovies={shuffledTopMovies}
           type="topmovies"
-          topmovies={topmovies}
         />
         <MovieSection
           title="Rilis Baru"
+          newmovies={shuffledNewMovies}
           type="newmovies"
-          newmovies={newmovies}
         />
       </main>
       <Footer footers={footer} />

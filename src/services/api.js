@@ -1,12 +1,12 @@
 import axios from "axios";
 
-const DATA_URL = "/assets/data.json";
+const BASE_URL = "https://690963622d902d0651b38e85.mockapi.io/api/v1/movies";
 
 export const filmAPI = {
   // Fetch semua data
   async getAllData() {
     try {
-      const { data } = await axios.get(DATA_URL);
+      const { data } = await axios.get(BASE_URL);
       return data;
     } catch (error) {
       console.error("Error fetching all data:", error);
@@ -17,8 +17,8 @@ export const filmAPI = {
   // Fetch data hero
   async getHeroData() {
     try {
-      const { data } = await axios.get(DATA_URL);
-      return data.dataHero || [];
+      const { data } = await axios.get(BASE_URL);
+      return data.filter((item) => item.kategori === "dataHero");
     } catch (error) {
       console.error("Error fetching hero data:", error);
       throw new Error(error.response?.data?.message || error.message);
@@ -28,8 +28,8 @@ export const filmAPI = {
   // Fetch data movies
   async getMovies() {
     try {
-      const { data } = await axios.get(DATA_URL);
-      return data.dataMovies || [];
+      const { data } = await axios.get(BASE_URL);
+      return data.filter((item) => item.kategori === "dataMovies");
     } catch (error) {
       console.error("Error fetching movies:", error);
       throw new Error(error.response?.data?.message || error.message);
@@ -39,8 +39,8 @@ export const filmAPI = {
   // Fetch top movies
   async getTopMovies() {
     try {
-      const { data } = await axios.get(DATA_URL);
-      return data.topMovies || [];
+      const { data } = await axios.get(BASE_URL);
+      return data.filter((item) => item.kategori === "topMovies");
     } catch (error) {
       console.error("Error fetching top movies:", error);
       throw new Error(error.response?.data?.message || error.message);
@@ -50,8 +50,8 @@ export const filmAPI = {
   // Fetch new releases
   async getNewReleases() {
     try {
-      const { data } = await axios.get(DATA_URL);
-      return data.newReleaseMovies || [];
+      const { data } = await axios.get(BASE_URL);
+      return data.filter((item) => item.kategori === "newReleaseMovies");
     } catch (error) {
       console.error("Error fetching new releases:", error);
       throw new Error(error.response?.data?.message || error.message);
@@ -61,8 +61,18 @@ export const filmAPI = {
   // Fetch trending movies
   async getTrendingMovies() {
     try {
-      const { data } = await axios.get(DATA_URL);
-      return data.trendingMovies || [];
+      const { data } = await axios.get(BASE_URL);
+      return data.filter((item) => item.kategori === "trendingMovies");
+    } catch (error) {
+      console.error("Error fetching trending movies:", error);
+      throw new Error(error.response?.data?.message || error.message);
+    }
+  },
+  // Fetch trending movies
+  async getVertikalMovies() {
+    try {
+      const { data } = await axios.get(BASE_URL);
+      return data.filter((item) => item.kategori === "imgVertikal");
     } catch (error) {
       console.error("Error fetching trending movies:", error);
       throw new Error(error.response?.data?.message || error.message);
@@ -72,14 +82,8 @@ export const filmAPI = {
   // Fetch movie by ID
   async getMovieById(id) {
     try {
-      const { data } = await axios.get(DATA_URL);
-      const allMovies = [
-        ...(data.dataMovies || []),
-        ...(data.topMovies || []),
-        ...(data.newReleaseMovies || []),
-        ...(data.trendingMovies || []),
-      ];
-      return allMovies.find((movie) => movie.id === parseInt(id));
+      const { data } = await axios.get(BASE_URL);
+      return data.find((movie) => movie.id === parseInt(id));
     } catch (error) {
       console.error("Error fetching movie by ID:", error);
       throw new Error(error.response?.data?.message || error.message);

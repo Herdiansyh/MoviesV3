@@ -18,11 +18,30 @@ export const useFilmData = () => {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const allData = await filmAPI.getAllData();
-        setData(allData);
+
+        // Ambil data per kategori secara paralel
+        const [hero, movies, top, newReleases, trending, vertikal] =
+          await Promise.all([
+            filmAPI.getHeroData(),
+            filmAPI.getMovies(),
+            filmAPI.getTopMovies(),
+            filmAPI.getNewReleases(),
+            filmAPI.getTrendingMovies(),
+            filmAPI.getVertikalMovies(),
+          ]);
+
+        setData({
+          dataHero: hero,
+          dataMovies: movies,
+          topMovies: top,
+          newReleaseMovies: newReleases,
+          trendingMovies: trending,
+          imgVertikal: vertikal,
+        });
+
         setError(null);
       } catch (err) {
-        setError(err.message);
+        setError(err.message || "Error fetching film data");
         console.error("Error fetching film data:", err);
       } finally {
         setLoading(false);
