@@ -17,8 +17,8 @@ export default function PopupDetailMovies({ movie, onClose }) {
   const safeEpisodes = Array.isArray(movie.episodes) ? movie.episodes : [];
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4">
-      <div className="relative w-full max-w-5xl max-h-[95vh] bg-[#181A1C] rounded-lg overflow-hidden shadow-2xl">
+    <div className="fixed mt-10 inset-0 z-50 flex items-center justify-center bg-black/80 p-4">
+      <div className="relative md:w-full w-1xl max-w-4xl max-h-[70vh] bg-[#181A1C] rounded-lg overflow-scroll shadow-2xl">
         {/* Tombol Tutup */}
         <button
           onClick={onClose}
@@ -33,7 +33,7 @@ export default function PopupDetailMovies({ movie, onClose }) {
           <div className="relative h-[400px] w-full">
             <img
               src={movie.image}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-top object-cover"
               alt={movie.title}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#181A1C] via-transparent to-transparent" />
@@ -48,9 +48,9 @@ export default function PopupDetailMovies({ movie, onClose }) {
                 {/* Tombol Play */}
                 <Link
                   to="/profile"
-                  className="flex items-center gap-2 bg-white text-black font-semibold px-5 py-2 rounded-full hover:bg-gray-300 transition"
+                  className="flex items-center gap-2 bg-blue-800 text-white font-semibold px-5 py-2 rounded-full hover:bg-blue-700 transition"
                 >
-                  <i className="fi fi-sr-play text-black"></i> Putar
+                  <i className="fi fi-sr-play text-white"></i> Putar
                 </Link>
 
                 {/* Tambah / Hapus dari Daftar Saya */}

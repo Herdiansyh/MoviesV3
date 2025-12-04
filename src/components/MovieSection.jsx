@@ -99,6 +99,7 @@ export default function MovieSection({
     datamovies = moviesvertikal;
   }
 
+  console.log(datamovies.moviesvertikal);
   return (
     <section className="relative md:pt-[60px] pt-[40px]">
       <h2 className="p-3 text-[20px] sm:text-[32px] leading-[120%] tracking-[0%] font-bold mb-5">

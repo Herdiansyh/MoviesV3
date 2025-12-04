@@ -18,6 +18,7 @@ export default function Hero({ datahero }) {
     setCurrentVideo("");
   };
 
+  console.log(datahero);
   return (
     <section className="relative sm:h-[500px] pt-[20px] h-[225px]">
       {/* Modal Video */}
