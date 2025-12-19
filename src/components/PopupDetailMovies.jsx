@@ -1,10 +1,15 @@
 import React from "react";
 import { useMyList } from "../context/MyListContext";
 import { Link } from "react-router-dom";
+import { useFilmData } from "../hooks/useFilmData";
+import MovieSection from "./MovieSection";
 
 export default function PopupDetailMovies({ movie, onClose }) {
   const { addToMyList, myList, removeFromMyList } = useMyList();
   const isInMyList = myList.some((m) => m.title === movie.title);
+
+  const { data } = useFilmData();
+  const datamovies = data.dataMovies || [];
 
   const handleAdd = () => addToMyList(movie);
   const handleRemove = () => removeFromMyList(movie.title);
@@ -17,12 +22,12 @@ export default function PopupDetailMovies({ movie, onClose }) {
   const safeEpisodes = Array.isArray(movie.episodes) ? movie.episodes : [];
 
   return (
-    <div className="fixed mt-10 inset-0 z-50 flex items-center justify-center bg-black/80 p-4">
-      <div className="relative md:w-full w-1xl max-w-4xl max-h-[70vh] bg-[#181A1C] rounded-lg overflow-scroll shadow-2xl">
+    <div className="fixed  inset-0 z-[100]  flex items-center justify-center bg-black/80 p-4">
+      <div className="relative md:w-full w-1xl max-w-4xl max-h-[85vh] bg-[#181A1C] rounded-lg overflow-hidden shadow-2xl">
         {/* Tombol Tutup */}
         <button
           onClick={onClose}
-          className="absolute right-4 top-4 z-10 w-10 h-10 flex items-center justify-center text-white text-2xl rounded-full bg-[rgba(0,0,0,0.4)] hover:bg-[rgba(0,0,0,0.7)] backdrop-blur-sm"
+          className="absolute hover:cursor-pointer right-4 top-4 z-10 w-10 h-10 flex items-center justify-center text-white text-2xl rounded-full bg-[rgba(0,0,0,0.4)] hover:bg-[rgba(0,0,0,0.7)] backdrop-blur-sm"
         >
           ✕
         </button>
@@ -30,7 +35,7 @@ export default function PopupDetailMovies({ movie, onClose }) {
         {/* Konten Scrollable */}
         <div className="overflow-y-auto max-h-[95vh]">
           {/* Hero Section */}
-          <div className="relative h-[400px] w-full">
+          <div className="relative h-[600px] w-full">
             <img
               src={movie.image}
               className="w-full h-full object-top object-cover"
@@ -72,7 +77,6 @@ export default function PopupDetailMovies({ movie, onClose }) {
               </div>
             </div>
           </div>
-
           {/* Content Section */}
           <div className="p-8 text-gray-300 space-y-6">
             {/* Info Film */}
@@ -140,6 +144,14 @@ export default function PopupDetailMovies({ movie, onClose }) {
                 </div>
               </div>
             )}
+          </div>{" "}
+          <div className="px-20 text-white">
+            <MovieSection
+              className="pt-0"
+              title="Rekomendasi film "
+              movies={datamovies}
+              type="movies"
+            />{" "}
           </div>
         </div>
       </div>

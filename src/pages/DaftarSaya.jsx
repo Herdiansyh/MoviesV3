@@ -13,7 +13,7 @@ export default function DaftarSaya({ footer }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLocalLoading(false);
-    }, 500);
+    }, 200);
 
     return () => clearTimeout(timer);
   }, []);

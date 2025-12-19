@@ -6,11 +6,16 @@ export default function DaftarSayaFilm({ myList }) {
     <main className="px-6 md:px-20 flex flex-col  space-y-10">
       {myList.length > 0 ? (
         <>
-          <div className="flex justify-between pt-30 items-center mb-6">
-            <h1 className="text-2xl md:text-3xl font-bold">Daftar Saya</h1>
-            <span className="text-gray-400">
-              {myList.length} {myList.length === 1 ? "film" : "film"} tersimpan
-            </span>
+          <div className="flex justify-between -mb-20 items-center ">
+            <div>
+              <h1 className="text-2xl md:text-3xl  font-bold pt-20">
+                Daftar Saya
+              </h1>
+              <span className="text-gray-400">
+                {myList.length} {myList.length === 1 ? "film" : "film"}{" "}
+                tersimpan
+              </span>
+            </div>
           </div>
           <MovieSection title="" daftarsaya={myList} type="daftar-saya" />
         </>
